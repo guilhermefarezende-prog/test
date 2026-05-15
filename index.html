@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockJump</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   
+
+        <audio src="sounds/sound-1-bard.mp3" loop id="musica"></audio>
+        
+        <div class="menu">
+            <img src="assets/titulo.png" alt="Logo do jogo" class="logo">
+            <div class="options">
+                <button class="btn-imagem-iniciar">Iniciar</button>
+                <button class="btn-imagem-carregar" onclick="window.location.href='screen/load/load.html'">Carregar</button>
+                <button class="btn-imagem-opçoes">Opições</button>
+                <button class="btn-imagem-info">Informações</button>
+            </div>
+        </div>
+
+        <div class="overley" id="overley"></div>
+
+
+        <div class="popup" id="popup-opcoes">
+            <h2>opções</h2>
+            <div class="popup-item">
+                <label>Volume</label>
+                <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+            </div>
+            <div class="popup-item">
+                <label>Som</label>
+                <button id="btn-mute">🔊mutado: não</button>
+            </div>
+            <button class="btn-fechar" id="btn-fechar-opcoes">Fechar</button>
+        </div>
+
+
+        <div class="popup" id="popup-info">
+            <h2>Informações</h2>
+            <button class="btn-fechar" id="btn-fechar-info">Fechar</button>
+        </div>
+
+        
+        <script src="scripts/sound.js"></script>
+        <script src="scripts/info.js"></script>
+        <script src="scripts/script.js"></script>
+
+</body>
+</html>

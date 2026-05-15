@@ -1,0 +1,91 @@
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #078efd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+body::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('assets/fase-floresta.png') no-repeat center/contain;
+    z-index: 0;
+}
+.menu{
+    position: relative;
+    z-index: 1;
+    width: clamp(250px, 90vw, 500px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width: clamp(220px, 60vw, 280px);
+    height: auto;
+    margin-bottom: clamp(20px, 5vw, 50px);
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.options button{
+    border: none;
+    width: clamp(250px, 80%, 300px);
+    height: clamp(70px, 8vh, 70px);
+    color: transparent;
+    cursor: pointer;
+    margin: clamp(5px, 2vh, 10px);
+}
+.btn-imagem-iniciar{background: url(assets/iniciar.png) no-repeat center/contain;}
+.btn-imagem-carregar{background: url(assets/carregar.png) no-repeat center/contain;}
+.btn-imagem-opçoes{background: url(assets/opcoes.png) no-repeat center/contain;}
+.btn-imagem-info{background: url(assets/informacoes.png) no-repeat center/contain;}
+.options button:hover{
+    filter: brightness(1.1);
+    transform: scale(1.05);
+    transition: traform 0.2s ease;
+}
+.overley{
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    backdrop-filter: blur(5px);
+    background: rgba(77, 77, 77, 0.342);
+}
+.popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a1a3a;
+    border: 5px solid #4a4a8a;
+    border-radius: 12px;
+    padding: clamp(15px, 4vw, 30px);
+    width: clamp(280px, 80vw, 400px);
+    z-index: 11;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+.popup h2{
+    margin: 0;
+}
+.popup-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    gap: 10px;
+}
